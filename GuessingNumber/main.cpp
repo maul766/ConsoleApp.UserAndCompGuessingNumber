@@ -5,12 +5,21 @@ int InputInt()
 {
 	int validInt;
 	std::cin >> validInt;
+	do
+	{
 	if (!(std::cin))
 	{	
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "Please Enter The Number!" << std::endl;
+		continue;
 	}
+	else
+	{
+		break;
+	}
+	} while (true);
+
 	return validInt;
 }
 char InputChar()
@@ -153,10 +162,6 @@ int main()
 	else if(choices == 3)
 	{
 		exit(0);
-	}
-	else
-	{
-		std::cout << "Please Input with following Instruction! ";
 	}
 	return 0;
 }
