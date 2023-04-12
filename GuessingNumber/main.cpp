@@ -5,7 +5,7 @@ int InputInt()
 {
 	int validInt;
 	std::cin >> validInt;
-	if (!(validInt))
+	if (!(std::cin))
 	{	
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -53,7 +53,7 @@ void UserGuessNumber(int maxNumber,int maxLife)
 		}
 		else if (userGuess > randomNumber && i != maxLife - 1)
 		{
-			std::cout << "Too High, the number is smaller than that"<<std::endl;
+			std::cout << "Too High, the number is smaller than that" << std::endl;
 		}
 		else if (userGuess < randomNumber && i != maxLife - 1)
 		{
