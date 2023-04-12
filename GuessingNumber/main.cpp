@@ -102,7 +102,6 @@ void CompGuessNumber(int maxNumber)
 }
 int main()
 {	
-	srand(static_cast<unsigned int>(time(0)));
 	int choices;
 	menu:
 		std::cout << "\t\t\t\tWelcome to Game Guess Number" << std::endl;
@@ -140,7 +139,6 @@ int main()
 		CompGuessNumber(10);
 		std::cout << "\n\tPress 1 to back to menu any Key to RestartGame: ";
 		choice = InputInt();
-		/*(choice == 1)? goto menu : goto gamePlay1;*/
 		if (choice == 1)
 		{
 			system("CLS");
